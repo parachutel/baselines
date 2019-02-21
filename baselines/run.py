@@ -2,6 +2,7 @@ import sys
 import multiprocessing
 import os.path as osp
 import gym
+import cas_env
 from collections import defaultdict
 import tensorflow as tf
 import numpy as np
@@ -50,6 +51,7 @@ _game_envs['retro'] = {
     'SpaceInvaders-Snes',
 }
 
+_game_envs['custom_type']={'cas-v0'}
 
 def train(args, extra_args):
     env_type, env_id = get_env_type(args.env)
